@@ -1,12 +1,14 @@
-# DevOps Thessaloníki Website
+# Thessaloníki DevOps Meetup Website
 
-Static website for the DevOps Thessaloníki meetup community.
+Static website for the Thessaloníki DevOps Meetup community.
+
+**Live site:** https://thessaloniki-devops-meetup.github.io
 
 ## Tech Stack
 
 - [Astro](https://astro.build/) - Static site generator
 - [TailwindCSS](https://tailwindcss.com/) - Styling
-- Markdown/YAML - Content management
+- Markdown - Content management
 
 ## Prerequisites
 
@@ -27,27 +29,24 @@ The site will be available at `http://localhost:4321`
 
 ## Commands
 
-| Command         | Description                              |
-|-----------------|------------------------------------------|
-| `npm run dev`   | Start dev server at `localhost:4321`     |
-| `npm run build` | Build production site to `./dist/`       |
-| `npm run preview` | Preview build locally before deploying |
+| Command           | Description                              |
+|-------------------|------------------------------------------|
+| `npm run dev`     | Start dev server at `localhost:4321`     |
+| `npm run build`   | Build production site to `./dist/`       |
+| `npm run preview` | Preview build locally before deploying   |
 
 ## Project Structure
 
 ```
 ├── src/
 │   ├── content/
-│   │   ├── site.yaml          # Site configuration
+│   │   ├── site.json          # Site configuration
 │   │   └── events/            # Event markdown files
-│   ├── layouts/
-│   │   └── Layout.astro       # Base layout
+│   │       ├── _template.md   # Template (ignored)
+│   │       ├── 001.md
+│   │       └── 002.md
 │   └── pages/
-│       ├── index.astro        # Home page
-│       ├── contact.astro      # Contact page
-│       └── events/
-│           ├── index.astro    # Events listing
-│           └── [slug].astro   # Event detail pages
+│       └── index.astro        # Single-page app
 ├── public/                    # Static assets
 ├── DESIGN.md                  # Design specification
 └── astro.config.mjs           # Astro configuration
@@ -57,34 +56,38 @@ The site will be available at `http://localhost:4321`
 
 ### Site Configuration
 
-Edit `src/content/site.yaml` to update site-wide settings:
+Edit `src/content/site.json`:
 
-```yaml
-name: "DevOps Thessaloníki"
-tagline: "Your tagline here"
-description: "About the meetup..."
-email: "hello@example.com"
-meetupUrl: "https://meetup.com/..."
-socials:
-  discord: ""
-  linkedin: ""
-  github: ""
+```json
+{
+  "name": "Thessaloníki DevOps Meetup",
+  "tagline": "Let's meet and discuss about everything DevOps!",
+  "description": "...",
+  "email": "",
+  "socials": {
+    "meetup": "https://www.meetup.com/thessaloniki-devops-meetup/",
+    "discord": "",
+    "linkedin": "",
+    "github": ""
+  }
+}
 ```
 
 ### Adding Events
 
-Create a new markdown file in `src/content/events/`:
+Create a new markdown file in `src/content/events/` (e.g., `003.md`):
 
 ```markdown
 ---
-number: 1
-title: "Meetup #001"
-date: 2025-01-15
+number: 3
+title: "Meetup #003"
+date: 2025-02-15
 location: "Venue Name"
 locationUrl: ""
 meetupUrl: ""
 description: ""
 image: ""
+draft: false
 talks:
   - title: "Talk Title"
     speakers:
@@ -94,9 +97,9 @@ talks:
     videoUrl: ""
     slidesUrl: ""
 ---
-
-Optional body content here.
 ```
+
+Set `draft: true` to hide an event from the site.
 
 ## Deployment
 
@@ -104,9 +107,7 @@ Optional body content here.
 
 Push to `main` branch. GitHub Actions will build and deploy automatically.
 
-**Setup:**
-1. Go to repository Settings → Pages
-2. Set Source to "GitHub Actions"
+The site is deployed at: https://thessaloniki-devops-meetup.github.io
 
 ### Manual / Other Platforms
 
