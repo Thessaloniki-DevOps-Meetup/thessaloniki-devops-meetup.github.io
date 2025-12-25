@@ -30,11 +30,10 @@ ${eventsNav}
   - <a href="#contact" class="text-cream hover:text-accent transition-colors">contact</a>
 
 <span class="text-accent">socials</span><span class="text-cream/50">:</span>
+  <span class="text-blue-gray">meetup</span><span class="text-cream/50">:</span> ${socialLink('meetup', siteConfig.socials.meetup)}
   <span class="text-blue-gray">discord</span><span class="text-cream/50">:</span> ${socialLink('discord', siteConfig.socials.discord)}
   <span class="text-blue-gray">linkedin</span><span class="text-cream/50">:</span> ${socialLink('linkedin', siteConfig.socials.linkedin)}
-  <span class="text-blue-gray">github</span><span class="text-cream/50">:</span> ${socialLink('github', siteConfig.socials.github)}
-  <span class="text-blue-gray">twitter</span><span class="text-cream/50">:</span> ${socialLink('twitter', siteConfig.socials.twitter)}
-  <span class="text-blue-gray">meetup</span><span class="text-cream/50">:</span> ${socialLink('meetup', siteConfig.meetupUrl)}`;
+  <span class="text-blue-gray">github</span><span class="text-cream/50">:</span> ${socialLink('github', siteConfig.socials.github)}`;
 ---
 
 <!doctype html>
@@ -130,10 +129,10 @@ ${eventsNav}
                 <a href={`mailto:${siteConfig.email}`} class="hover:text-accent transition-colors">{siteConfig.email}</a>
               </p>
             )}
-            {siteConfig.meetupUrl && (
+            {siteConfig.socials.meetup && (
               <p>
                 <span class="text-cream/50">meetup:</span>{" "}
-                <a href={siteConfig.meetupUrl} target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">{siteConfig.meetupUrl}</a>
+                <a href={siteConfig.socials.meetup} target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">{siteConfig.socials.meetup}</a>
               </p>
             )}
             {siteConfig.socials.discord && (
@@ -156,7 +155,7 @@ ${eventsNav}
             )}
           </div>
 
-          {!siteConfig.email && !siteConfig.meetupUrl && Object.values(siteConfig.socials).every(v => !v) && (
+          {!siteConfig.email && Object.values(siteConfig.socials).every(v => !v) && (
             <p class="text-cream/50">No contact information yet.</p>
           )}
         </section>

@@ -88,7 +88,6 @@ Container/port/harbor aesthetic:
     "discord": "",
     "linkedin": "",
     "github": "",
-    "twitter": ""
   }
 }
 ```

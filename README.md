@@ -69,7 +69,6 @@ socials:
   discord: ""
   linkedin: ""
   github: ""
-  twitter: ""
 ```
 
 ### Adding Events

@@ -1,13 +1,12 @@
 {
   "name": "DevOps Thessaloníki",
-  "tagline": "",
-  "description": "",
+  "tagline": "Let's meet and discuss about everything DevOps!",
+  "description": "From Kubernetes to home brewed Raspberry Pi clusters, this is the place to meet new peers with the same passion keeping a DIY ethics first.",
   "email": "",
-  "meetupUrl": "",
   "socials": {
-    "discord": "",
-    "linkedin": "",
-    "github": "",
-    "twitter": ""
+    "meetup": "https://www.meetup.com/thessaloniki-devops-meetup/",
+    "discord": "https://discord.gg/79RdtnSgys",
+    "linkedin": "https://www.linkedin.com/groups/13384048/",
+    "github": "https://github.com/Thessaloniki-DevOps-Meetup"
   }
 }
