@@ -33,40 +33,42 @@ Container/port/harbor aesthetic:
 - Harbor imagery
 - Reflects "containers" in DevOps context
 
-## Pages
+## Layout
 
-| Route              | Description                          |
-|--------------------|--------------------------------------|
-| `/`                | Home - general info about the meetup |
-| `/events/`         | Events listing (archive)             |
-| `/events/[slug]/`  | Individual event page with talks     |
-| `/contact/`        | Contact details and social links     |
+**Single-page design** with two full-height panels:
 
-**Note:** No separate `/talks/` page. Talks are displayed within their parent event pages.
+| Panel | Content |
+|-------|--------------------------------------|
+| Left (50%) | YAML-style navigation with syntax highlighting |
+| Right (50%) | Scrollable content sections |
+
+### Sections (anchor-based navigation)
+- `#home` — General info about the meetup
+- `#events` — Events archive with all events listed
+- `#event-{number}` — Jump to specific event (e.g., `#event-1`)
+- `#contact` — Contact details and social links
+
+### YAML Navigation Syntax Colors
+- **Keys (top-level):** Accent coral (`#e07a5f`)
+- **Keys (nested):** Blue-gray (`#d5dfe5`)
+- **Values:** Cream (`#f5f0e8`)
+- **Punctuation/comments:** Cream at 50% opacity
+- **Empty values:** `~` in cream at 30% opacity
 
 ## Directory Structure
 
 ```
 /src
   /content
-    site.yaml                 # Site configuration
+    site.json                 # Site configuration
     /events
+      _template.md            # Template file (draft: true, ignored)
       001.md                  # Event files (numbered)
       002.md
   /pages
-    index.astro
-    contact.astro
-    events/
-      index.astro             # Events listing
-      [slug].astro            # Dynamic event pages
-  /layouts
-    Layout.astro              # Base layout
-  /components
-    EventCard.astro
-    TalkCard.astro
-    Header.astro
-    Footer.astro
+    index.astro               # Single-page app
 /public
+  favicon.svg
   /images
     /events                   # Event hero images (user-provided)
 ```
@@ -118,10 +120,12 @@ Optional markdown body for additional event details, notes, or recap.
 
 ## Design Principles
 
-1. **Markdown-driven:** All content lives in markdown/yaml files. No hardcoded content.
+1. **Markdown-driven:** All content lives in markdown/JSON files. No hardcoded content.
 2. **Blank slate:** No placeholder or fake content. Empty state until real content is added.
 3. **Minimal:** Clean, technical aesthetic. No unnecessary decoration.
 4. **Portable:** Pure static output, deployable anywhere.
+5. **Single-page:** All content on one page with anchor navigation and smooth scrolling.
+6. **Terminal aesthetic:** YAML-like syntax highlighting for navigation, monospace font.
 
 ## Event Numbering Convention
 
