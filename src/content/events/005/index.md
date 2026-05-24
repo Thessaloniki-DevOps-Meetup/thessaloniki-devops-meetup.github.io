@@ -16,8 +16,12 @@ talks:
       - name: "Stelios Mantzouranis"
         url: "https://www.linkedin.com/in/stelios-mantzouranis-64480b206/"
     description: "TBA"
-    videoUrl: ""
-    slidesUrl: ""
+    materials:
+      - type: slides
+        label: "Slides (PPTX)"
+        url: /events/005/devops_meetup.pptx
+      - type: code
+        url: https://github.com/smantzou/app-of-apps-meetup-demo
   - title: "KubeCon & GTC Highlights"
     speakers:
       - name: "Ioannis Demelis"
