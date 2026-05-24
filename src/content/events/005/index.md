@@ -15,7 +15,7 @@ talks:
         url: "https://www.linkedin.com/in/diomidispt/"
       - name: "Stelios Mantzouranis"
         url: "https://www.linkedin.com/in/stelios-mantzouranis-64480b206/"
-    description: "TBA"
+    description: "From core principles to a pattern that bootstraps your entire platform from a single file. Diomidis and Stelios will walk through real YAML, a real repo, and finish with a live demo showing how it all works in practice."
     materials:
       - type: slides
         label: "Slides (PPTX)"
