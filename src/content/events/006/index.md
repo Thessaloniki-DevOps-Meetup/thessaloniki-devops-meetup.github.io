@@ -1,11 +1,11 @@
 ---
 number: 6
-title: "Meetup #006 — Beers & Chat"
+title: "Meetup #006 — Social Wrap-up"
 date: 2026-06-10
 location: "Rational Data"
 locationUrl: "https://maps.app.goo.gl/XJf1xg5jgBkZnfTd6"
 meetupUrl: ""
-description: "No slides, no stage — just beers and good company. A casual get-together to swap stories, meet new faces, and catch up."
+description: "We meet one last time before the summer break, back where we started. This time around we have no presentations, we just gather and hang out with beers and pizza ;)"
 image: ""
 draft: true
 talks: []
