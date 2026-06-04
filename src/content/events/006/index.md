@@ -1,6 +1,6 @@
 ---
 number: 6
-title: "Meetup #006 — Social Wrap-up"
+title: "Meetup #099 — Social Wrap-up"
 date: 2026-06-10
 location: "Rational Data"
 locationUrl: "https://maps.app.goo.gl/XJf1xg5jgBkZnfTd6"
