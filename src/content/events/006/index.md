@@ -7,6 +7,6 @@ locationUrl: "https://maps.app.goo.gl/XJf1xg5jgBkZnfTd6"
 meetupUrl: "https://www.meetup.com/thessaloniki-devops-meetup/events/315101754"
 description: "We meet one last time before the summer break, back where we started. This time around we have no presentations, we just gather and hang out with beers and pizza ;)"
 image: ""
-draft: true
+draft: false
 talks: []
 ---
